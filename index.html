@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICS Student Digital ID Cards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">ICS</div>
+      <div>
+        <h1>Institute of Computer Science</h1>
+        <p>Digital Student Identification System</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button onclick="showAll()">All Students</button>
+      <button onclick="window.print()">Print</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>NVQ L04 STUDENTS INFORMATION</h2>
+      
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search by student name or ID..." oninput="searchStudents()">
+      </div>
+    </section>
+
+    <section id="studentGrid" class="student-grid"></section>
+    <div id="empty" class="empty" style="display:none;">No student found.</div>
+  </main>
+
+  <footer>
+    <p>Institute of Computer Science • MJF Charitable Foundation</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="students.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
